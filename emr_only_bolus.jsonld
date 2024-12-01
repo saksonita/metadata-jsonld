@@ -1,0 +1,137 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "fieldPath": "schema:propertyID",
+    "description": "schema:description",
+    "dataType": "schema:dataType",
+    "nullable": "schema:isAccessibleForFree",
+    "platform": "schema:provider",
+    "version": "schema:version",
+    "distribution": "schema:distribution"
+  },
+  "@type": "Dataset",
+  "schema:identifier": "urn:li:dataset:(urn:li:dataPlatform:mysql,dataproducts.emr_only_bolus,PROD)",
+  "schema:name": "emr_only_bolus",
+  "schema:description": "This dataset contains anesthesia records including details about PCA type, total amount injected, and patient demographics.",
+  "schema:provider": {
+    "@type": "Organization",
+    "name": "MySQL"
+  },
+  "schema:version": "1",
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "urn:li:container:6d597a13b7061a1efe8bb99978bb7757"
+    }
+  ],
+  "schema:property": [
+    {
+      "fieldPath": "성별",
+      "description": "Gender with value F/M",
+      "dataType": "TEXT",
+      "nullable": true
+    },
+    {
+      "fieldPath": "나이구간",
+      "description": "Age range in 10-year intervals",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "신장구간",
+      "description": "Height range in 10cm intervals",
+      "dataType": "TEXT",
+      "nullable": true
+    },
+    {
+      "fieldPath": "체중구간",
+      "description": "Weight range in 10cm intervals",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "수술과",
+      "description": "Surgery department, e.g., Orthopedics, Gynecology, etc.",
+      "dataType": "TEXT",
+      "nullable": true
+    },
+    {
+      "fieldPath": "마취시간",
+      "description": "Anesthesia duration in hours",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "BSA",
+      "description": "Body Surface Area",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "SET_AMOUNT_U",
+      "description": "Total injection amount range in mcg (e.g., 0, 500, 1000)",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "주입완료",
+      "description": "Injection completion time range",
+      "dataType": "TEXT",
+      "nullable": true
+    },
+    {
+      "fieldPath": "평균시간당주입량",
+      "description": "Average hourly injection = Total injection / Total time",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "PCA_TYPE",
+      "description": "Type of PCA: Only Bolus or Continuous Bolus",
+      "dataType": "TEXT",
+      "nullable": true
+    },
+    {
+      "fieldPath": "data_type",
+      "description": "Indicates source: new, old, or 2021",
+      "dataType": "TEXT",
+      "nullable": true
+    },
+    {
+      "fieldPath": "TOTAL_AMT_CUM_U",
+      "description": "Total injection amount",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "ALL_TIME_ELAPSED",
+      "description": "Total injection time set in the device",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "TIME_ELAPSED",
+      "description": "Total usage time",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "SET_DOSE_RATE",
+      "description": "Set dose rate for the drug",
+      "dataType": "DOUBLE",
+      "nullable": true
+    },
+    {
+      "fieldPath": "PATIENT_ID",
+      "description": "Patient registration number",
+      "dataType": "INTEGER",
+      "nullable": true
+    },
+    {
+      "fieldPath": "SET_BOLUS_PAT_U",
+      "description": "Bolus set value (U)",
+      "dataType": "DOUBLE",
+      "nullable": true
+    }
+  ]
+}
